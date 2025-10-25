@@ -1,0 +1,215 @@
+{
+  "info": {
+    "name": "Inspection Visits API",
+    "_postman_id": "c9d7fa3c-0a7c-4d6d-8eaa-123456789abc",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Email\": \"admin@demo.local\", \"Password\": \"P@ssw0rd!\"}"
+        }
+      }
+    },
+    {
+      "name": "List Entities",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/entities",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "entities"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Entity",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/entities",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "entities"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Name\": \"Test Place\", \"Address\": \"123 Road\", \"Category\": \"Food\"}"
+        }
+      }
+    },
+    {
+      "name": "Schedule Visit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/visits/schedule",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "visits",
+            "schedule"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"EntityToInspectId\": 1, \"InspectorId\": 1, \"ScheduledAt\": \"2030-01-01T10:00:00Z\"}"
+        }
+      }
+    },
+    {
+      "name": "Update Visit Status",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/visits/1/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "visits",
+            "1",
+            "status"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"NewStatus\": 2, \"Score\": 85, \"Notes\": \"All good\"}"
+        }
+      }
+    },
+    {
+      "name": "Add Violation (after completion)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/visits/1/violations",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "visits",
+            "1",
+            "violations"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Code\": \"V-001\", \"Description\": \"Minor issue\", \"Severity\": 0}"
+        }
+      }
+    },
+    {
+      "name": "Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/dashboard",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "dashboard"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

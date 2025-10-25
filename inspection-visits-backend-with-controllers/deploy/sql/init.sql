@@ -1,0 +1,1 @@
+-- Optional manual schema init (EF Core Migrations are recommended).
