@@ -11,5 +11,6 @@ public class MappingProfile : Profile
         CreateMap<Inspector, InspectorDto>().ReverseMap();
         CreateMap<Violation, ViolationDto>().ReverseMap();
         CreateMap<InspectionVisit, InspectionVisitDto>().ReverseMap();
+
     }
 }

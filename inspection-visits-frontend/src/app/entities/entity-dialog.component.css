@@ -1,0 +1,8 @@
+
+.dialog-form{display:flex;flex-direction:column;gap:16px;padding:8px 0 4px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:768px){.grid{grid-template-columns:1fr 1fr}}
+.full-span{grid-column:1/-1}
+.actions{display:flex;gap:12px;justify-content:flex-end;margin-top:4px;flex-wrap:wrap}
+mat-form-field{width:100%}
+textarea[matInput]{resize:vertical}

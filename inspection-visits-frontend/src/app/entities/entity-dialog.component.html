@@ -1,0 +1,27 @@
+
+<h2 mat-dialog-title>{{ data?.id ? 'Edit Entity' : 'Create Entity' }}</h2>
+<form [formGroup]="form" (ngSubmit)="save()" class="dialog-form">
+  <div class="grid">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="e.g. Nile Bakery">
+      <mat-error *ngIf="form.controls.name?.hasError('required')">Required</mat-error>
+      <mat-error *ngIf="form.controls.name?.hasError('nameTaken')">Name already exists</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category" placeholder="e.g. Food / Retail">
+    </mat-form-field>
+
+    <mat-form-field class="full-span" appearance="outline">
+      <mat-label>Address</mat-label>
+      <textarea matInput formControlName="address" placeholder="Street, City" rows="2"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="actions">
+    <button mat-stroked-button type="button" (click)="close()">Cancel</button>
+    <button mat-flat-button color="primary" [disabled]="form.invalid || form.pending">Save</button>
+  </div>
+</form>

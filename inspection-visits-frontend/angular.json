@@ -1,0 +1,45 @@
+
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "defaultProject": "inspection-visits-frontend",
+  "projects": {
+    "inspection-visits-frontend": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/inspection-visits-frontend",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["node_modules/@angular/material/prebuilt-themes/indigo-pink.css","src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": { "optimization": true, "outputHashing": "all", "sourceMap": false, "namedChunks": false, "extractLicenses": true, "vendorChunk": false },
+            "development": { "optimization": false, "sourceMap": true }
+          },
+          "defaultConfiguration": "development"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "browserTarget": "inspection-visits-frontend:build" },
+          "configurations": {
+            "production": { "browserTarget": "inspection-visits-frontend:build:production" },
+            "development": { "browserTarget": "inspection-visits-frontend:build:development" }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  },
+  "cli": { "analytics": false }
+}

@@ -1,0 +1,641 @@
+2025-10-25 20:40:50.085 +03:00 [INF] User profile is available. Using 'C:\Users\Youssef Ghonem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-25 20:40:51.758 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-25 20:40:51.849 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-25 20:40:51.870 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-25 20:40:51.886 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-25 20:40:51.936 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-25 20:40:51.989 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-25 20:40:52.378 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__role_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]
+        WHERE [a].[Name] = @__role_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:40:52.397 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]
+        WHERE [a].[Name] = @__role_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:40:52.472 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__adminEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__adminEmail_0
+2025-10-25 20:40:52.608 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__inspEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__inspEmail_0
+2025-10-25 20:40:52.628 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Inspectors] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:40:52.644 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EntitiesToInspect] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:40:52.702 +03:00 [INF] Database seeded.
+2025-10-25 20:40:53.116 +03:00 [INF] Now listening on: https://localhost:63886
+2025-10-25 20:40:53.123 +03:00 [INF] Now listening on: http://localhost:63887
+2025-10-25 20:40:53.224 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-25 20:40:53.229 +03:00 [INF] Hosting environment: Development
+2025-10-25 20:40:53.232 +03:00 [INF] Content root path: C:\Users\Youssef Ghonem\Downloads\adreeTask\inspection-visits-backend\src\InspectionVisits.Api
+2025-10-25 20:40:53.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/ - null null
+2025-10-25 20:40:53.949 +03:00 [INF] HTTP GET / responded 404 in 55.8131 ms
+2025-10-25 20:40:53.966 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/ - 404 0 null 251.6801ms
+2025-10-25 20:40:53.979 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:63886/, Response status code: 404
+2025-10-25 20:42:19.401 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/auth/login - null null
+2025-10-25 20:42:19.429 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:42:19.438 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/auth/login - 204 null null 36.1937ms
+2025-10-25 20:42:19.451 +03:00 [INF] Request starting HTTP/2 POST https://localhost:63886/api/auth/login - application/json 51
+2025-10-25 20:42:19.468 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:42:19.475 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.AuthController.Login (InspectionVisits.Api)'
+2025-10-25 20:42:19.511 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(LoginRequest) on controller InspectionVisits.Api.Controllers.AuthController (InspectionVisits.Api).
+2025-10-25 20:42:19.653 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-10-25 20:42:19.929 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-10-25 20:42:20.007 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-25 20:42:20.035 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.AuthController.Login (InspectionVisits.Api) in 513.9205ms
+2025-10-25 20:42:20.067 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.AuthController.Login (InspectionVisits.Api)'
+2025-10-25 20:42:20.133 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 660.7325 ms
+2025-10-25 20:42:20.158 +03:00 [INF] Request finished HTTP/2 POST https://localhost:63886/api/auth/login - 200 null application/json; charset=utf-8 707.137ms
+2025-10-25 20:42:20.240 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/dashboard - null null
+2025-10-25 20:42:20.251 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:42:20.253 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/dashboard - 204 null null 13.0711ms
+2025-10-25 20:42:20.255 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/dashboard - null null
+2025-10-25 20:42:20.272 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:42:20.362 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.DashboardController.Get (InspectionVisits.Api)'
+2025-10-25 20:42:20.372 +03:00 [INF] Route matched with {action = "Get", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[InspectionVisits.Application.Features.Dashboard.Queries.DashboardVm] Get() on controller InspectionVisits.Api.Controllers.DashboardController (InspectionVisits.Api).
+2025-10-25 20:42:20.615 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Status], COUNT(*)
+FROM [InspectionVisits] AS [i]
+GROUP BY [i].[Status]
+2025-10-25 20:42:20.670 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__monthStart_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT AVG(CAST([i].[Score] AS float))
+FROM [InspectionVisits] AS [i]
+WHERE [i].[ScheduledAt] >= @__monthStart_0 AND [i].[Score] IS NOT NULL
+2025-10-25 20:42:20.680 +03:00 [INF] Executing ObjectResult, writing value of type 'InspectionVisits.Application.Features.Dashboard.Queries.DashboardVm'.
+2025-10-25 20:42:20.695 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.DashboardController.Get (InspectionVisits.Api) in 316.626ms
+2025-10-25 20:42:20.699 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.DashboardController.Get (InspectionVisits.Api)'
+2025-10-25 20:42:20.702 +03:00 [INF] HTTP GET /api/dashboard responded 200 in 424.7077 ms
+2025-10-25 20:42:20.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/dashboard - 200 null application/json; charset=utf-8 452.0746ms
+2025-10-25 20:42:24.341 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:42:24.350 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:42:24.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:42:24.352 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 11.4648ms
+2025-10-25 20:42:24.365 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:42:24.379 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:42:24.388 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:42:24.597 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:42:24.613 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:42:24.636 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 242.9986ms
+2025-10-25 20:42:24.647 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:42:24.656 +03:00 [INF] HTTP GET /api/entities responded 200 in 280.6923 ms
+2025-10-25 20:42:24.669 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 315.0564ms
+2025-10-25 20:43:30.887 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:43:30.901 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:43:30.903 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 17.9814ms
+2025-10-25 20:43:30.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:43:30.931 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:43:30.937 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:43:30.941 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:43:30.960 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:43:30.966 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:43:30.969 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 24.3973ms
+2025-10-25 20:43:30.973 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:43:30.974 +03:00 [INF] HTTP GET /api/entities responded 200 in 39.4481 ms
+2025-10-25 20:43:30.978 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 64.6541ms
+2025-10-25 20:44:44.151 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:44:44.172 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:44:44.175 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 25.2889ms
+2025-10-25 20:44:44.206 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:44:44.213 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:44:44.215 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:44:44.220 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:44:44.249 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:44:44.256 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:44:44.260 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 31.3714ms
+2025-10-25 20:44:44.263 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:44:44.266 +03:00 [INF] HTTP GET /api/entities responded 200 in 51.4070 ms
+2025-10-25 20:44:44.270 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 65.3512ms
+2025-10-25 20:45:46.102 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:45:46.118 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:45:46.123 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 21.3766ms
+2025-10-25 20:45:46.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:45:46.155 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:45:46.159 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:45:46.162 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:45:46.187 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:45:46.200 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:45:46.204 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 36.5253ms
+2025-10-25 20:45:46.208 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:45:46.212 +03:00 [INF] HTTP GET /api/entities responded 200 in 53.8460 ms
+2025-10-25 20:45:46.218 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 90.0775ms
+2025-10-25 20:45:53.311 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:45:53.320 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:45:53.322 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 10.9203ms
+2025-10-25 20:45:53.327 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:45:53.341 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:45:53.344 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:45:53.347 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:45:53.360 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:45:53.370 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:45:53.374 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 21.2796ms
+2025-10-25 20:45:53.388 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:45:53.393 +03:00 [INF] HTTP GET /api/entities responded 200 in 49.0597 ms
+2025-10-25 20:45:53.400 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 73.0375ms
+2025-10-25 20:45:57.737 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:45:57.746 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:45:57.749 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 11.8482ms
+2025-10-25 20:45:57.759 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:45:57.768 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:45:57.771 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:45:57.774 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:45:57.784 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:45:57.789 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:45:57.792 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 13.8113ms
+2025-10-25 20:45:57.795 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:45:57.798 +03:00 [INF] HTTP GET /api/entities responded 200 in 27.7474 ms
+2025-10-25 20:45:57.803 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 43.8417ms
+2025-10-25 20:46:03.794 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:46:03.801 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:46:03.805 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 11.4698ms
+2025-10-25 20:46:03.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:46:03.823 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:46:03.827 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:46:03.833 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:46:03.852 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:46:03.861 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:46:03.870 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 32.0944ms
+2025-10-25 20:46:03.875 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:46:03.879 +03:00 [INF] HTTP GET /api/entities responded 200 in 52.8882 ms
+2025-10-25 20:46:03.885 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 77.6286ms
+2025-10-25 20:47:30.999 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:47:31.018 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:47:31.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:47:31.024 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 25.0129ms
+2025-10-25 20:47:31.043 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:47:31.048 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:47:31.051 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:47:31.069 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:47:31.075 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:47:31.078 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 22.6192ms
+2025-10-25 20:47:31.082 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:47:31.086 +03:00 [INF] HTTP GET /api/entities responded 200 in 38.1406 ms
+2025-10-25 20:47:31.093 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 65.1001ms
+2025-10-25 20:47:36.840 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:47:36.847 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:47:36.850 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 9.6191ms
+2025-10-25 20:47:36.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:47:36.866 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:47:36.869 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:47:36.872 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:47:36.887 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:47:36.893 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:47:36.897 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 20.636ms
+2025-10-25 20:47:36.901 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:47:36.904 +03:00 [INF] HTTP GET /api/entities responded 200 in 35.6278 ms
+2025-10-25 20:47:36.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 53.9687ms
+2025-10-25 20:51:52.825 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:51:52.840 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:51:52.842 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 17.5426ms
+2025-10-25 20:51:52.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:51:52.865 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:51:52.867 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:51:52.870 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:51:52.882 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:51:52.891 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:51:52.895 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 19.7769ms
+2025-10-25 20:51:52.900 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:51:52.902 +03:00 [INF] HTTP GET /api/entities responded 200 in 34.6539 ms
+2025-10-25 20:51:52.906 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 57.4023ms
+2025-10-25 20:53:31.331 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:53:31.346 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:53:31.348 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 17.5801ms
+2025-10-25 20:53:31.356 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:53:31.373 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:53:31.376 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:53:31.378 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:53:31.395 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:53:31.403 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:53:31.406 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 23.6091ms
+2025-10-25 20:53:31.410 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:53:31.413 +03:00 [INF] HTTP GET /api/entities responded 200 in 37.7784 ms
+2025-10-25 20:53:31.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 61.4666ms
+2025-10-25 20:53:48.993 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:53:49.004 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:53:49.006 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 13.1284ms
+2025-10-25 20:53:49.009 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:53:49.023 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:53:49.026 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:53:49.028 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:53:49.035 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:53:49.041 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:53:49.045 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 12.6076ms
+2025-10-25 20:53:49.052 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:53:49.056 +03:00 [INF] HTTP GET /api/entities responded 200 in 30.3618 ms
+2025-10-25 20:53:49.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 50.7423ms
+2025-10-25 20:54:25.019 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:54:25.033 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:54:25.035 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 16.5192ms
+2025-10-25 20:54:25.044 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:54:25.066 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:54:25.069 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:54:25.073 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:54:25.099 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:54:25.109 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:54:25.113 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 36.278ms
+2025-10-25 20:54:25.119 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:54:25.126 +03:00 [INF] HTTP GET /api/entities responded 200 in 56.9994 ms
+2025-10-25 20:54:25.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 94.3042ms
+2025-10-25 20:54:28.956 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:54:28.972 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:54:28.981 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 26.0052ms
+2025-10-25 20:54:28.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:54:29.000 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:54:29.003 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:54:29.008 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:54:29.017 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:54:29.024 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:54:29.028 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 13.8993ms
+2025-10-25 20:54:29.032 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:54:29.035 +03:00 [INF] HTTP GET /api/entities responded 200 in 32.0878 ms
+2025-10-25 20:54:29.042 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 58.7ms
+2025-10-25 20:56:27.499 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:56:27.514 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:27.517 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 17.3454ms
+2025-10-25 20:56:27.520 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:56:27.542 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:27.547 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:27.549 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:56:27.566 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:56:27.571 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:56:27.573 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 19.4486ms
+2025-10-25 20:56:27.576 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:27.579 +03:00 [INF] HTTP GET /api/entities responded 200 in 32.6149 ms
+2025-10-25 20:56:27.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 63.1062ms
+2025-10-25 20:56:32.616 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:56:32.626 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:32.631 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:56:32.628 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 12.8341ms
+2025-10-25 20:56:32.657 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:32.672 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:32.677 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:56:32.729 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:56:32.761 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:56:32.764 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 49.1836ms
+2025-10-25 20:56:32.767 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:32.768 +03:00 [INF] HTTP GET /api/entities responded 200 in 96.1960 ms
+2025-10-25 20:56:32.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 139.3307ms
+2025-10-25 20:56:55.081 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:56:55.089 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:55.092 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 10.6499ms
+2025-10-25 20:56:55.102 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:56:55.114 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:55.118 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:55.122 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:56:55.133 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:56:55.145 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:56:55.150 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 22.0679ms
+2025-10-25 20:56:55.154 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:55.157 +03:00 [INF] HTTP GET /api/entities responded 200 in 40.1276 ms
+2025-10-25 20:56:55.162 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 60.9682ms
+2025-10-25 20:56:58.167 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:56:58.177 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:58.180 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 14.1728ms
+2025-10-25 20:56:58.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:56:58.219 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:56:58.222 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:58.228 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:56:58.252 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:56:58.264 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:56:58.265 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 20.1153ms
+2025-10-25 20:56:58.267 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:56:58.269 +03:00 [INF] HTTP GET /api/entities responded 200 in 46.6894 ms
+2025-10-25 20:56:58.271 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 87.5279ms
+2025-10-25 20:57:01.846 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:57:01.875 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:01.877 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 31.3322ms
+2025-10-25 20:57:01.880 +03:00 [INF] Request starting HTTP/2 POST https://localhost:63886/api/entities - application/json 55
+2025-10-25 20:57:01.905 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:01.908 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.Create (InspectionVisits.Api)'
+2025-10-25 20:57:01.918 +03:00 [INF] Route matched with {action = "Create", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[InspectionVisits.Application.DTOs.EntityToInspectDto] Create(UpsertEntityBody) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:57:02.182 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (Size = 400), @p1='?' (Size = 100), @p2='?' (DbType = DateTime2), @p3='?' (Size = 200), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EntitiesToInspect] ([Address], [Category], [CreatedAt], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-10-25 20:57:02.237 +03:00 [INF] Executing ObjectResult, writing value of type 'InspectionVisits.Application.DTOs.EntityToInspectDto'.
+2025-10-25 20:57:02.253 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.Create (InspectionVisits.Api) in 329.4534ms
+2025-10-25 20:57:02.264 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.Create (InspectionVisits.Api)'
+2025-10-25 20:57:02.275 +03:00 [INF] HTTP POST /api/entities responded 200 in 367.4584 ms
+2025-10-25 20:57:02.292 +03:00 [INF] Request finished HTTP/2 POST https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 412.3885ms
+2025-10-25 20:57:02.298 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:57:02.321 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:02.324 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 25.9541ms
+2025-10-25 20:57:02.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:57:02.341 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:02.343 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:02.345 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:57:02.353 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:57:02.359 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:02.362 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 13.9278ms
+2025-10-25 20:57:02.365 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:02.367 +03:00 [INF] HTTP GET /api/entities responded 200 in 25.0184 ms
+2025-10-25 20:57:02.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 50.9541ms
+2025-10-25 20:57:05.090 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:57:05.099 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:05.101 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 10.4643ms
+2025-10-25 20:57:05.107 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:57:05.115 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:05.117 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:05.120 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:57:05.126 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:57:05.132 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:05.136 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 12.4002ms
+2025-10-25 20:57:05.139 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:05.141 +03:00 [INF] HTTP GET /api/entities responded 200 in 24.3409 ms
+2025-10-25 20:57:05.145 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 38.9109ms
+2025-10-25 20:57:11.162 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/dashboard - null null
+2025-10-25 20:57:11.168 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:11.170 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/dashboard - 204 null null 8.3276ms
+2025-10-25 20:57:11.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/dashboard - null null
+2025-10-25 20:57:11.187 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:11.190 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.DashboardController.Get (InspectionVisits.Api)'
+2025-10-25 20:57:11.194 +03:00 [INF] Route matched with {action = "Get", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[InspectionVisits.Application.Features.Dashboard.Queries.DashboardVm] Get() on controller InspectionVisits.Api.Controllers.DashboardController (InspectionVisits.Api).
+2025-10-25 20:57:11.216 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Status], COUNT(*)
+FROM [InspectionVisits] AS [i]
+GROUP BY [i].[Status]
+2025-10-25 20:57:11.226 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__monthStart_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT AVG(CAST([i].[Score] AS float))
+FROM [InspectionVisits] AS [i]
+WHERE [i].[ScheduledAt] >= @__monthStart_0 AND [i].[Score] IS NOT NULL
+2025-10-25 20:57:11.232 +03:00 [INF] Executing ObjectResult, writing value of type 'InspectionVisits.Application.Features.Dashboard.Queries.DashboardVm'.
+2025-10-25 20:57:11.236 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.DashboardController.Get (InspectionVisits.Api) in 35.681ms
+2025-10-25 20:57:11.240 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.DashboardController.Get (InspectionVisits.Api)'
+2025-10-25 20:57:11.242 +03:00 [INF] HTTP GET /api/dashboard responded 200 in 52.9035 ms
+2025-10-25 20:57:11.246 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/dashboard - 200 null application/json; charset=utf-8 72.6004ms
+2025-10-25 20:57:15.254 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:57:15.265 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:15.267 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 14.2567ms
+2025-10-25 20:57:15.272 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:57:15.301 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:15.304 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:15.309 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:57:15.318 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:57:15.324 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:15.328 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 13.5269ms
+2025-10-25 20:57:15.331 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:15.332 +03:00 [INF] HTTP GET /api/entities responded 200 in 28.6510 ms
+2025-10-25 20:57:15.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 63.8393ms
+2025-10-25 20:57:15.776 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:15.784 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:15.786 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - 204 null null 10.5468ms
+2025-10-25 20:57:15.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:15.803 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:15.805 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:15.816 +03:00 [INF] Route matched with {action = "List", controller = "Visits"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.InspectionVisitDto]] List(System.Nullable`1[System.DateTime], System.Nullable`1[System.DateTime], System.Nullable`1[InspectionVisits.Domain.Enums.VisitStatus], System.Nullable`1[System.Int32], System.String) on controller InspectionVisits.Api.Controllers.VisitsController (InspectionVisits.Api).
+2025-10-25 20:57:15.897 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[EntityToInspectId], [i].[InspectorId], [i].[ScheduledAt], [i].[Status], [i].[Score], [i].[Notes], [v].[Id], [v].[Code], [v].[Description], [v].[Severity]
+FROM [InspectionVisits] AS [i]
+LEFT JOIN [Violations] AS [v] ON [i].[Id] = [v].[InspectionVisitId]
+ORDER BY [i].[Id]
+2025-10-25 20:57:15.902 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.InspectionVisitDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:15.916 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api) in 95.2794ms
+2025-10-25 20:57:15.934 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:15.946 +03:00 [INF] HTTP GET /api/visits responded 200 in 141.3967 ms
+2025-10-25 20:57:15.950 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - 200 null application/json; charset=utf-8 161.7409ms
+2025-10-25 20:57:20.885 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:57:20.894 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:20.895 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 10.9231ms
+2025-10-25 20:57:20.898 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:57:20.909 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:20.911 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:20.914 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:57:20.921 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:57:20.927 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:20.929 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 11.296ms
+2025-10-25 20:57:20.933 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:20.935 +03:00 [INF] HTTP GET /api/entities responded 200 in 24.1224 ms
+2025-10-25 20:57:20.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 41.4011ms
+2025-10-25 20:57:25.082 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:25.095 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:25.097 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - 204 null null 16.3356ms
+2025-10-25 20:57:25.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:25.111 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:25.114 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:25.117 +03:00 [INF] Route matched with {action = "List", controller = "Visits"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.InspectionVisitDto]] List(System.Nullable`1[System.DateTime], System.Nullable`1[System.DateTime], System.Nullable`1[InspectionVisits.Domain.Enums.VisitStatus], System.Nullable`1[System.Int32], System.String) on controller InspectionVisits.Api.Controllers.VisitsController (InspectionVisits.Api).
+2025-10-25 20:57:25.127 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[EntityToInspectId], [i].[InspectorId], [i].[ScheduledAt], [i].[Status], [i].[Score], [i].[Notes], [v].[Id], [v].[Code], [v].[Description], [v].[Severity]
+FROM [InspectionVisits] AS [i]
+LEFT JOIN [Violations] AS [v] ON [i].[Id] = [v].[InspectionVisitId]
+ORDER BY [i].[Id]
+2025-10-25 20:57:25.135 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.InspectionVisitDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:25.138 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api) in 16.6411ms
+2025-10-25 20:57:25.142 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:25.144 +03:00 [INF] HTTP GET /api/visits responded 200 in 30.6964 ms
+2025-10-25 20:57:25.148 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - 200 null application/json; charset=utf-8 48.8576ms
+2025-10-25 20:57:31.569 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/visits?category=Food&pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:31.589 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:31.593 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/visits?category=Food&pageIndex=0&pageSize=10 - 204 null null 24.2199ms
+2025-10-25 20:57:31.596 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/visits?category=Food&pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:31.607 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:31.610 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:31.612 +03:00 [INF] Route matched with {action = "List", controller = "Visits"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.InspectionVisitDto]] List(System.Nullable`1[System.DateTime], System.Nullable`1[System.DateTime], System.Nullable`1[InspectionVisits.Domain.Enums.VisitStatus], System.Nullable`1[System.Int32], System.String) on controller InspectionVisits.Api.Controllers.VisitsController (InspectionVisits.Api).
+2025-10-25 20:57:31.703 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__req_Category_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[EntityToInspectId], [i].[InspectorId], [i].[ScheduledAt], [i].[Status], [i].[Score], [i].[Notes], [e].[Id], [v].[Id], [v].[Code], [v].[Description], [v].[Severity]
+FROM [InspectionVisits] AS [i]
+INNER JOIN [EntitiesToInspect] AS [e] ON [i].[EntityToInspectId] = [e].[Id]
+LEFT JOIN [Violations] AS [v] ON [i].[Id] = [v].[InspectionVisitId]
+WHERE [e].[Category] = @__req_Category_0
+ORDER BY [i].[Id], [e].[Id]
+2025-10-25 20:57:31.711 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.InspectionVisitDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:31.714 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api) in 94.2441ms
+2025-10-25 20:57:31.720 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:31.723 +03:00 [INF] HTTP GET /api/visits responded 200 in 113.7300 ms
+2025-10-25 20:57:31.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/visits?category=Food&pageIndex=0&pageSize=10 - 200 null application/json; charset=utf-8 131.6042ms
+2025-10-25 20:57:49.639 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 20:57:49.650 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:49.654 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 15.601ms
+2025-10-25 20:57:49.657 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 20:57:49.680 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:49.684 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:49.687 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 20:57:49.703 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 20:57:49.711 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:49.715 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 22.8818ms
+2025-10-25 20:57:49.719 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 20:57:49.722 +03:00 [INF] HTTP GET /api/entities responded 200 in 37.7670 ms
+2025-10-25 20:57:49.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 72.0185ms
+2025-10-25 20:57:58.546 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:58.563 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:58.568 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - 204 null null 22.6842ms
+2025-10-25 20:57:58.570 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - null null
+2025-10-25 20:57:58.587 +03:00 [INF] CORS policy execution successful.
+2025-10-25 20:57:58.591 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:58.593 +03:00 [INF] Route matched with {action = "List", controller = "Visits"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.InspectionVisitDto]] List(System.Nullable`1[System.DateTime], System.Nullable`1[System.DateTime], System.Nullable`1[InspectionVisits.Domain.Enums.VisitStatus], System.Nullable`1[System.Int32], System.String) on controller InspectionVisits.Api.Controllers.VisitsController (InspectionVisits.Api).
+2025-10-25 20:57:58.606 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[EntityToInspectId], [i].[InspectorId], [i].[ScheduledAt], [i].[Status], [i].[Score], [i].[Notes], [v].[Id], [v].[Code], [v].[Description], [v].[Severity]
+FROM [InspectionVisits] AS [i]
+LEFT JOIN [Violations] AS [v] ON [i].[Id] = [v].[InspectionVisitId]
+ORDER BY [i].[Id]
+2025-10-25 20:57:58.614 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.InspectionVisitDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 20:57:58.618 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api) in 21.1617ms
+2025-10-25 20:57:58.622 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
+2025-10-25 20:57:58.624 +03:00 [INF] HTTP GET /api/visits responded 200 in 33.2573 ms
+2025-10-25 20:57:58.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/visits?pageIndex=0&pageSize=10 - 200 null application/json; charset=utf-8 57.5021ms
+2025-10-25 21:13:56.458 +03:00 [INF] User profile is available. Using 'C:\Users\Youssef Ghonem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-25 21:13:58.452 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-25 21:13:58.530 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-25 21:13:58.543 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-25 21:13:58.561 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-25 21:13:58.647 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-25 21:13:58.685 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-25 21:13:59.165 +03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__role_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]
+        WHERE [a].[Name] = @__role_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 21:13:59.193 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]
+        WHERE [a].[Name] = @__role_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 21:13:59.316 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__adminEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__adminEmail_0
+2025-10-25 21:13:59.443 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__inspEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__inspEmail_0
+2025-10-25 21:13:59.474 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Inspectors] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 21:13:59.491 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EntitiesToInspect] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 21:13:59.546 +03:00 [INF] Database seeded.
+2025-10-25 21:14:00.156 +03:00 [INF] Now listening on: https://localhost:63886
+2025-10-25 21:14:00.161 +03:00 [INF] Now listening on: http://localhost:63887
+2025-10-25 21:14:00.329 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-25 21:14:00.332 +03:00 [INF] Hosting environment: Development
+2025-10-25 21:14:00.336 +03:00 [INF] Content root path: C:\Users\Youssef Ghonem\Downloads\adreeTask\inspection-visits-backend\src\InspectionVisits.Api
+2025-10-25 21:14:00.668 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/ - null null
+2025-10-25 21:14:00.933 +03:00 [INF] HTTP GET / responded 404 in 57.4164 ms
+2025-10-25 21:14:00.951 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/ - 404 0 null 291.8032ms
+2025-10-25 21:14:00.968 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:63886/, Response status code: 404
+2025-10-25 21:15:25.516 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886//api/entities - null null
+2025-10-25 21:15:25.536 +03:00 [INF] CORS policy execution successful.
+2025-10-25 21:15:25.545 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886//api/entities - 204 null null 29.0735ms
+2025-10-25 21:15:25.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886//api/entities - null null
+2025-10-25 21:15:25.584 +03:00 [INF] CORS policy execution successful.
+2025-10-25 21:15:25.729 +03:00 [INF] HTTP GET //api/entities responded 404 in 126.9066 ms
+2025-10-25 21:15:25.743 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886//api/entities - 404 0 null 186.0534ms
+2025-10-25 21:15:25.766 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:63886//api/entities, Response status code: 404
+2025-10-25 21:15:26.549 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:63886/api/entities - null null
+2025-10-25 21:15:26.563 +03:00 [INF] CORS policy execution successful.
+2025-10-25 21:15:26.566 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:63886/api/entities - 204 null null 17.8095ms
+2025-10-25 21:15:26.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/api/entities - null null
+2025-10-25 21:15:26.592 +03:00 [INF] CORS policy execution successful.
+2025-10-25 21:15:26.612 +03:00 [INF] Executing endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 21:15:26.654 +03:00 [INF] Route matched with {action = "List", controller = "Entities"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[InspectionVisits.Application.DTOs.EntityToInspectDto]] List(System.String) on controller InspectionVisits.Api.Controllers.EntitiesController (InspectionVisits.Api).
+2025-10-25 21:15:26.949 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Name], [e].[Address], [e].[Category]
+FROM [EntitiesToInspect] AS [e]
+2025-10-25 21:15:26.973 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[InspectionVisits.Application.DTOs.EntityToInspectDto, InspectionVisits.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-25 21:15:27.003 +03:00 [INF] Executed action InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api) in 333.6848ms
+2025-10-25 21:15:27.008 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.EntitiesController.List (InspectionVisits.Api)'
+2025-10-25 21:15:27.013 +03:00 [INF] HTTP GET /api/entities responded 200 in 416.4733 ms
+2025-10-25 21:15:27.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/entities - 200 null application/json; charset=utf-8 451.7292ms

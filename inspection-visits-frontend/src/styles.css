@@ -1,0 +1,9 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, Arial, sans-serif; background: #ffffff; color: #111827; }
+.container { padding: 24px; max-width: 1200px; margin: 0 auto; }
+.header { display:flex; align-items:center; gap:16px; margin: 8px 0 16px; }
+.spacer { flex: 1 1 auto; }
+.mat-form-field { width: 100%; }
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 768px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }

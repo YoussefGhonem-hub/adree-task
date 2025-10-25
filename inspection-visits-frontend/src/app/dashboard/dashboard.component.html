@@ -1,0 +1,12 @@
+
+<h2>Dashboard</h2>
+<div class="card-grid">
+  <mat-card>
+    <h3>Average Score (This Month)</h3>
+    <div class="big">{{ avg | number:'1.0-2' }}</div>
+  </mat-card>
+  <mat-card *ngFor="let item of (statusCounts | keyvalue)">
+    <h3>{{ item.key }}</h3>
+    <div class="big">{{ item.value }}</div>
+  </mat-card>
+</div>

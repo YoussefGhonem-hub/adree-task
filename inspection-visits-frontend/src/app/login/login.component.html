@@ -1,0 +1,21 @@
+
+<mat-card>
+  <h2>Login</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form-grid">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password">
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-flat-button color="primary" [disabled]="form.invalid || loading">
+        {{ loading ? 'Signing in...' : 'Login' }}
+      </button>
+    </div>
+  </form>
+</mat-card>

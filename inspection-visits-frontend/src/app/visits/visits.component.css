@@ -1,0 +1,7 @@
+
+.mb16{margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px;align-items:end}
+@media (min-width:900px){.grid{grid-template-columns:repeat(6,1fr)} .actions{grid-column:1/-1; display:flex; gap:8px; justify-content:flex-end}}
+.table-wrap{overflow:auto}
+.full{width:100%}
+.spacer{flex:1 1 auto}

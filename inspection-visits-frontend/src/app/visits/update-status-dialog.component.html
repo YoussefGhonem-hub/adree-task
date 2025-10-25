@@ -1,0 +1,30 @@
+
+<h2 mat-dialog-title>Update Status</h2>
+<form [formGroup]="form" (ngSubmit)="save()" class="grid">
+  <mat-form-field appearance="outline">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option value="Planned">Planned</mat-option>
+      <mat-option value="InProgress">InProgress</mat-option>
+      <mat-option value="Completed">Completed</mat-option>
+      <mat-option value="Cancelled">Cancelled</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <ng-container *ngIf="showScore">
+    <mat-form-field appearance="outline">
+      <mat-label>Score</mat-label>
+      <input matInput type="number" formControlName="score" min="0" max="100" placeholder="0 - 100">
+    </mat-form-field>
+  </ng-container>
+
+  <mat-form-field class="full" appearance="outline">
+    <mat-label>Notes</mat-label>
+    <textarea matInput rows="3" formControlName="notes"></textarea>
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-stroked-button type="button" (click)="close()">Cancel</button>
+    <button mat-flat-button color="primary">Update</button>
+  </div>
+</form>

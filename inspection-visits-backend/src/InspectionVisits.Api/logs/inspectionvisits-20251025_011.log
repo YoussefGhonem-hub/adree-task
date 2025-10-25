@@ -133,3 +133,65 @@ ORDER BY [i].[Id]
 2025-10-25 19:22:36.159 +03:00 [INF] Executed endpoint 'InspectionVisits.Api.Controllers.VisitsController.List (InspectionVisits.Api)'
 2025-10-25 19:22:36.160 +03:00 [INF] HTTP GET /api/Visits responded 200 in 130.3749 ms
 2025-10-25 19:22:36.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/api/Visits - 200 null application/json; charset=utf-8 141.2608ms
+2025-10-25 20:18:36.036 +03:00 [INF] User profile is available. Using 'C:\Users\Youssef Ghonem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-25 20:18:38.035 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-25 20:18:38.134 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-25 20:18:38.155 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-25 20:18:38.179 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-25 20:18:38.298 +03:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-25 20:18:38.350 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-25 20:18:38.813 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@__role_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]
+        WHERE [a].[Name] = @__role_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:18:38.835 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]
+        WHERE [a].[Name] = @__role_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:18:38.949 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__adminEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__adminEmail_0
+2025-10-25 20:18:39.101 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__inspEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__inspEmail_0
+2025-10-25 20:18:39.125 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Inspectors] AS [i]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:18:39.158 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EntitiesToInspect] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-25 20:18:39.233 +03:00 [INF] Database seeded.
+2025-10-25 20:18:40.012 +03:00 [INF] Now listening on: https://localhost:63886
+2025-10-25 20:18:40.020 +03:00 [INF] Now listening on: http://localhost:63887
+2025-10-25 20:18:40.138 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-25 20:18:40.143 +03:00 [INF] Hosting environment: Development
+2025-10-25 20:18:40.153 +03:00 [INF] Content root path: C:\Users\Youssef Ghonem\Downloads\adreeTask\inspection-visits-backend\src\InspectionVisits.Api
+2025-10-25 20:18:41.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:63886/ - null null
+2025-10-25 20:18:41.427 +03:00 [INF] HTTP GET / responded 404 in 63.3131 ms
+2025-10-25 20:18:41.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:63886/ - 404 0 null 365.0716ms
+2025-10-25 20:18:41.475 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:63886/, Response status code: 404

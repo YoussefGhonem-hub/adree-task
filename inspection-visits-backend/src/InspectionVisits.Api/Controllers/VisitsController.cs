@@ -30,17 +30,17 @@ public class VisitsController : ControllerBase
     public record AddViolationBody(string Code, string Description, ViolationSeverity Severity);
 
     [HttpPost("schedule")]
-    [Authorize(Policy = "AdminOnly")]
-    public Task<InspectionVisitDto> Schedule([FromBody] ScheduleVisitBody body) 
+    [Authorize(Roles = "Admin,Inspector")]
+    public Task<InspectionVisitDto> Schedule([FromBody] ScheduleVisitBody body)
         => _mediator.Send(new ScheduleVisit(body.EntityToInspectId, body.InspectorId, body.ScheduledAt));
 
     [HttpPost("{id:int}/status")]
-    [Authorize(Policy = "InspectorOnly")]
-    public Task<InspectionVisitDto> UpdateStatus([FromRoute] int id, [FromBody] UpdateStatusBody body) 
+    [Authorize(Roles = "Admin,Inspector")]
+    public Task<InspectionVisitDto> UpdateStatus([FromRoute] int id, [FromBody] UpdateStatusBody body)
         => _mediator.Send(new UpdateVisitStatus(id, body.NewStatus, body.Score, body.Notes));
 
     [HttpPost("{id:int}/violations")]
-    [Authorize(Policy = "InspectorOnly")]
-    public Task<ViolationDto> AddViolation([FromRoute] int id, [FromBody] AddViolationBody body) 
+    [Authorize(Roles = "Admin,Inspector")]
+    public Task<ViolationDto> AddViolation([FromRoute] int id, [FromBody] AddViolationBody body)
         => _mediator.Send(new AddViolation(id, body.Code, body.Description, body.Severity));
 }

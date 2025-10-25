@@ -1,0 +1,1 @@
+mat-card{max-width:520px;margin:32px auto;padding:24px}.form-grid{display:grid;grid-template-columns:1fr;gap:16px}.actions{display:flex;justify-content:flex-end}@media (min-width:640px){.form-grid{grid-template-columns:1fr 1fr}.actions{grid-column:1/-1}}

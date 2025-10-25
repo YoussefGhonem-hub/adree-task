@@ -1,0 +1,99 @@
+<div class="header">
+  <h2>Visits</h2>
+  <span class="spacer"></span>
+  <button mat-flat-button color="primary" (click)="openSchedule()">Schedule Visit</button>
+</div>
+
+<mat-card class="mb16">
+  <form [formGroup]="filters" class="grid">
+    <mat-form-field appearance="outline">
+      <mat-label>From</mat-label>
+      <input matInput [matDatepicker]="dp1" formControlName="from">
+      <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+      <mat-datepicker #dp1></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>To</mat-label>
+      <input matInput [matDatepicker]="dp2" formControlName="to">
+      <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+      <mat-datepicker #dp2></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="">Any</mat-option>
+        <mat-option value="Planned">Planned</mat-option>
+        <mat-option value="InProgress">InProgress</mat-option>
+        <mat-option value="Completed">Completed</mat-option>
+        <mat-option value="Cancelled">Cancelled</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Inspector</mat-label>
+      <mat-select formControlName="inspectorId">
+        <mat-option [value]="null">Any</mat-option>
+        <mat-option *ngFor="let i of inspectors" [value]="i.id">{{ i.fullName }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category" placeholder="Food / Retail ...">
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-stroked-button type="button"
+        (click)="filters.reset({from:null,to:null,category:'',status:'',inspectorId:null}); load();">Reset</button>
+      <button mat-flat-button color="primary" type="button" (click)="load()">Apply</button>
+    </div>
+  </form>
+</mat-card>
+
+<mat-card>
+  <div class="table-wrap">
+    <table mat-table [dataSource]="ds" matSort class="mat-elevation-z2 full">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+        <td mat-cell *matCellDef="let v">{{ v.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="scheduledAt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Scheduled</th>
+        <td mat-cell *matCellDef="let v">{{ v.scheduledAt | date: 'short' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+        <td mat-cell *matCellDef="let v">{{ v.status }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="inspectorId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Inspector</th>
+        <td mat-cell *matCellDef="let v">
+          {{ getInspectorName(v.inspectorId) || v.inspectorId }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="score">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Score</th>
+        <td mat-cell *matCellDef="let v">{{ v.score ?? '-' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let v">
+          <button mat-button (click)="openUpdateStatus(v)">Update Status</button>
+          <button mat-button (click)="openAddViolation(v)">Add Violation</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="cols"></tr>
+      <tr mat-row *matRowDef="let row; columns: cols;"></tr>
+    </table>
+  </div>
+
+  <mat-paginator [length]="total" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5,10,20]"></mat-paginator>
+</mat-card>

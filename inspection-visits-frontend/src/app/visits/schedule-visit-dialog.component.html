@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Schedule Visit</h2>
+
+<form [formGroup]="form" (ngSubmit)="save()" class="grid">
+  <mat-form-field appearance="outline">
+    <mat-label>Entity</mat-label>
+    <mat-select formControlName="entityToInspectId" required>
+      <mat-option *ngFor="let e of data.entities" [value]="e.id">
+        {{ e.name }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.controls.entityToInspectId.touched && form.controls.entityToInspectId.hasError('required')">
+      Entity is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Inspector</mat-label>
+    <mat-select formControlName="inspectorId" required>
+      <mat-option *ngFor="let i of data.inspectors" [value]="i.id">
+        {{ i.fullName }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.controls.inspectorId.touched && form.controls.inspectorId.hasError('required')">
+      Inspector is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Scheduled Date</mat-label>
+    <input matInput [matDatepicker]="dp" formControlName="scheduledAt" [min]="minDate" required>
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp></mat-datepicker>
+    <mat-error *ngIf="form.controls.scheduledAt.touched && form.controls.scheduledAt.hasError('required')">
+      Date is required
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Optional note -->
+  <mat-form-field class="full" appearance="outline">
+    <mat-label>Note (optional)</mat-label>
+    <textarea matInput formControlName="note" rows="2" placeholder="e.g., bring thermometer"></textarea>
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-stroked-button type="button" (click)="close()">Cancel</button>
+    <button mat-flat-button color="primary" [disabled]="form.invalid">Schedule</button>
+  </div>
+</form>

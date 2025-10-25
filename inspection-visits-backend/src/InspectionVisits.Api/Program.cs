@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,8 @@ builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssemblyContaining<CreateEntityToInspect>();
 });
+builder.Services.AddCors();   // no named policies
+
 builder.Services.AddValidatorsFromAssemblyContaining<CreateEntityToInspect>();
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddAutoMapper(typeof(MappingProfile));
@@ -62,10 +65,16 @@ builder.Services.AddAuthorization(options =>
 });
 
 // Controllers + ProblemDetails
-builder.Services.AddControllers().AddJsonOptions(o =>
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(o =>
 {
-    o.JsonSerializerOptions.PropertyNamingPolicy = null;
+    o.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    o.JsonSerializerOptions.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
+    // optional: keep it forgiving when reading
+    o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
 });
+
 
 builder.Services.AddProblemDetails(o =>
 {
@@ -106,6 +115,11 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+app.UseCors(cors => cors
+    .AllowAnyOrigin()
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+);
 
 // Global exception to ProblemDetails (RFC7807)
 app.UseExceptionHandler("/error");
